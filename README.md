@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clinic Queue Management System
 
-## Getting Started
+This is my frontend project made with Next.js + TypeScript for the Clinic Queue Management System.
 
-First, run the development server:
+## How to Run
+
+From the `next` folder:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+- `/` Login
+- `/admin`
+- `/patient`
+- `/receptionist`
+- `/doctor`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Base URL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`https://cmsback.sampaarsh.cloud`
 
-## Deploy on Vercel
+## Roles and Access
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+admin: view clinic info and counts, list users, create doctors/receptionists/patients.
+patient: book appointment, view my appointments with token/status, view appointment details, view my prescriptions and reports.
+receptionist: view daily queue by date, update queue status (waiting -> in-progress/skip, in-progress -> done).
+doctor: view today’s queue, add prescription and report for an appointment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo Login (Optional)
+
+If these users exist in the backend, you can login directly with them:
+
+- Admin: `24010101614@darshan.ac.in` / `password123`
+- Patient: `deep@pat.com` / `deepPat123`
+- Receptionist: `deep@rec.com` / `deepRec123`
+- Doctor: `deep@dr.com` / `deepDr123`
+
+If any of these are not present in the backend, the login will fail and you should use the correct credentials provided by the admin.
